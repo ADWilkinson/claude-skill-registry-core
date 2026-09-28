@@ -1,7 +1,7 @@
 {
-  "discovered_at": "2026-09-27T04:33:35.169408Z",
+  "discovered_at": "2026-09-28T04:33:52.043307Z",
   "total_repos": 300,
-  "total_skills": 60,
+  "total_skills": 1,
   "scanned_repos": 300,
   "limits": {
     "max_repos": 300,
@@ -92,6 +92,7 @@
     "XiaoMaColtAI/math-modeling-skill",
     "a5c-ai/babysitter",
     "aaddrick/attention-control",
+    "aaddrick/building-with-typesafe-jev",
     "activeloopai/hivemind",
     "addyosmani/web-quality-skills",
     "adityaarsharma/youtube-marketing-skills",
@@ -190,6 +191,7 @@
     "jeecgboot/skills",
     "jezweb/claude-skills",
     "jiweiyeah/Skills-Manager",
+    "joetawil7/first-pass",
     "joeyvansommeren/journey-mapper",
     "jomeswang/agnes-ai-skill",
     "karanb192/awesome-claude-skills",
@@ -248,7 +250,6 @@
     "pedrohcgs/claude-code-my-workflow",
     "plugin87/ux-ui-agent-skills",
     "prekuter/dryforge",
-    "proyecto26/sherlock-ai-plugin",
     "proyecto26/slides-ai-plugin",
     "radekamirko/C.R.I.S.P",
     "rampstackco/claude-skills",
@@ -284,7 +285,6 @@
     "tdimino/claude-code-minoan",
     "teng-lin/notebooklm-py",
     "thedotmack/claude-mem",
-    "theogbrand/yoink",
     "timescale/pg-aiguide",
     "titanwings/distilly",
     "tonone-ai/tonone",
@@ -314,244 +314,8 @@
   ],
   "skills": [
     {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": ".agents/skills/senpi-qa/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/ulw-loop/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/ulw-plan/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/mass-ulw/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/init-deep/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/hyperplan/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/ultrawork/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/onboarding/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/dag-library/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/shared-skills/skills/browser/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/give-me-tips/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/skills/ulw-research/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/shared-skills/skills/data-scientist/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-senpi/src/components/x-search/skill/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-codex/plugin/components/lcx/skills/lcx-doctor/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-codex/plugin/components/lcx/skills/lcx-report-bug/SKILL.md"
-    },
-    {
-      "repo": "code-yeongyu/oh-my-openagent",
-      "path": "packages/omo-codex/plugin/components/lcx/skills/lcx-contribute-bug-fix/SKILL.md"
-    },
-    {
-      "repo": "jabrena/plinth",
-      "path": "skills/814-regulations-iso-25010/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/bug-report/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/rfc-writer/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "skills-i18n/es/prd-template/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "skills-i18n/ja/loan-decoder/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/model-card/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/sop-writer/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/token-cost/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/pip-writer/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/sales-page/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/token-diet/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/idea-storm/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/faq-builder/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/world-clock/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/hook-writer/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/rent-vs-buy/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/fire-number/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/hoa-decoder/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/self-review/SKILL.md"
-    },
-    {
-      "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/okr-builder/SKILL.md"
-    },
-    {
-      "repo": "pedrohcgs/claude-code-my-workflow",
-      "path": ".claude/skills/issues/SKILL.md"
-    },
-    {
-      "repo": "thedotmack/claude-mem",
-      "path": "cowork/skills/agent-cost-report/SKILL.md"
-    },
-    {
-      "repo": "thedotmack/claude-mem",
-      "path": "plugin/skills/agent-cost-report/SKILL.md"
-    },
-    {
-      "repo": "thedotmack/claude-mem",
-      "path": "claude-mem-cursor/skills/agent-cost-report/SKILL.md"
-    },
-    {
-      "repo": "thedotmack/claude-mem",
-      "path": "claude-mem-grok-bot/skills/agent-cost-report/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-lint/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-quiz/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-graph/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-query/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-merge/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-write/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-rename/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-ingest/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-report/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-review/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-project/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-metrics/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-privacy/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-publish/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-backfill/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-transcript/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-chat-import/SKILL.md"
-    },
-    {
-      "repo": "undefined-ui/second-brain-os",
-      "path": "skills/second-brain-changed-my-mind/SKILL.md"
+      "repo": "avelikiy/great_cto",
+      "path": "skills/verticals/SKILL.md"
     }
   ]
 }

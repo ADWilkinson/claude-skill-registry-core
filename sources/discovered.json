@@ -1,7 +1,7 @@
 {
-  "discovered_at": "2026-10-01T05:03:22.731280Z",
+  "discovered_at": "2026-10-02T04:55:29.175189Z",
   "total_repos": 300,
-  "total_skills": 19,
+  "total_skills": 32,
   "scanned_repos": 300,
   "limits": {
     "max_repos": 300,
@@ -184,13 +184,13 @@
     "itsmostafa/aws-agent-skills",
     "jabrena/plinth",
     "jangviktor-web/nihaixia",
-    "jaredrhod/ai-memory-vault",
     "jeecgboot/skills",
     "jezweb/claude-skills",
     "jiweiyeah/Skills-Manager",
     "joetawil7/first-pass",
     "joeyvansommeren/journey-mapper",
     "jomeswang/agnes-ai-skill",
+    "justxor/claude-code-pro-course",
     "kaankiziltug/logo-design-skill",
     "karanb192/awesome-claude-skills",
     "karanb192/itr-wala",
@@ -202,6 +202,7 @@
     "kishormorol/cli-faq-shortcuts",
     "kromahlusenii-ops/ham",
     "laolaoshiren/claude-code-skills-zh",
+    "latent-spaces/brag",
     "levi-qiao/longgraph-skill",
     "levnikolaevich/claude-code-skills",
     "liarjsdev/liarjs-skills",
@@ -284,7 +285,6 @@
     "tdimino/claude-code-minoan",
     "teng-lin/notebooklm-py",
     "thedotmack/claude-mem",
-    "theogbrand/yoink",
     "timescale/pg-aiguide",
     "titanwings/distilly",
     "tonone-ai/tonone",
@@ -315,79 +315,131 @@
   "skills": [
     {
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/pybamm/SKILL.md"
+      "path": "skills/nextflow/SKILL.md"
     },
     {
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/relion/SKILL.md"
-    },
-    {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/mageck/SKILL.md"
-    },
-    {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/flowkit/SKILL.md"
-    },
-    {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/cantera/SKILL.md"
-    },
-    {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/nmrglue/SKILL.md"
-    },
-    {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/tellurium/SKILL.md"
-    },
-    {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/pycalphad/SKILL.md"
-    },
-    {
-      "repo": "cgallic/kai-cmo-harness",
-      "path": "harness/skills/ux-writing/SKILL.md"
-    },
-    {
-      "repo": "cgallic/kai-cmo-harness",
-      "path": "harness/skills-v2/ux-writing/SKILL.md"
-    },
-    {
-      "repo": "cgallic/kai-cmo-harness",
-      "path": "harness/skills/kai-motion-spot/SKILL.md"
+      "path": "skills/paperclip/SKILL.md"
     },
     {
       "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/test-audit/skills/test-audit/SKILL.md"
+      "path": "plugins/cloudflare-skills/skills/k2/SKILL.md"
     },
     {
-      "repo": "oxylabs/agent-skills",
-      "path": "skills/agent-browser/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/agent-browser/skills/dogfood/SKILL.md"
     },
     {
-      "repo": "scdenney/open-science-skills",
-      "path": "codex/beamer/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/stripe-skills/skills/metronome/SKILL.md"
     },
     {
-      "repo": "scdenney/open-science-skills",
-      "path": "plugin/skills/beamer/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/cloudflare-skills/skills/basin/SKILL.md"
     },
     {
-      "repo": "serejaris/personal-corp-os",
-      "path": "skills/make-3d/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/supabase-skills/skills/supabase/SKILL.md"
     },
     {
-      "repo": "serejaris/personal-corp-os",
-      "path": "skills/benchmark/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/agent-browser/skills/webmcp-gen/SKILL.md"
     },
     {
-      "repo": "serejaris/personal-corp-os",
-      "path": "skills/make-landing/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/stripe-skills/skills/stripe-docs/SKILL.md"
     },
     {
-      "repo": "thedotmack/claude-mem",
-      "path": "plugin/skills/handoff/SKILL.md"
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/stripe-skills/skills/stripe-apps/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/agent-browser/skills/derive-client/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/stripe-skills/skills/connect-recommend/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/reading-livekit-docs/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/testing-livekit-agents/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/building-livekit-agents/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/operating-livekit-agents/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/debugging-livekit-agents/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/writing-livekit-scenarios/SKILL.md"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "path": "plugins/livekit-skills/skills/running-livekit-simulations/SKILL.md"
+    },
+    {
+      "repo": "gooseworks-ai/goose-skills",
+      "path": "skills/ads/capabilities/review-finished-ad/SKILL.md"
+    },
+    {
+      "repo": "gooseworks-ai/goose-skills",
+      "path": "skills/ads/capabilities/write-video-ad-script/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "plugin-example/skills/review/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/commit/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/onboard/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/refactor/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/fix-issue/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/code-review/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/release-notes/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/pr-description/SKILL.md"
+    },
+    {
+      "repo": "justxor/claude-code-pro-course",
+      "path": "starter-kit/.claude/skills/write-tests/SKILL.md"
+    },
+    {
+      "repo": "latent-spaces/brag",
+      "path": "skills/brag/SKILL.md"
+    },
+    {
+      "repo": "latent-spaces/brag",
+      "path": "skills/brag-slim/SKILL.md"
     }
   ]
 }

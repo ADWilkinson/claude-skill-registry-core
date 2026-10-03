@@ -1,7 +1,7 @@
 {
-  "discovered_at": "2026-10-02T04:55:29.175189Z",
+  "discovered_at": "2026-10-03T07:43:34.461246Z",
   "total_repos": 300,
-  "total_skills": 32,
+  "total_skills": 45,
   "scanned_repos": 300,
   "limits": {
     "max_repos": 300,
@@ -16,6 +16,7 @@
     "23blocks-OS/ai-maestro",
     "AlpacaLabsLLC/skills-for-architects",
     "Appllama/appllama-skills",
+    "Ar9av/obsidian-wiki",
     "Ark0N/Codeman",
     "Ashad001/remotion-transitions",
     "AsiaOstrich/universal-dev-skills",
@@ -34,7 +35,6 @@
     "Frappucc1no/recall-loom",
     "GaZmagik/iso-24495",
     "Gabberflast/academic-pptx-skill",
-    "HIDORAKAI002/ai-workspace-archive",
     "Hainrixz/skill-vault",
     "IJONIS/geo-lint",
     "J-nowcow/awesome-korean-agent-skills",
@@ -82,7 +82,6 @@
     "ToluVictor/canvas-apps-tools",
     "UiPath/coder_eval",
     "VikashLoomba/copilot-mcp",
-    "Vincentwei1021/video-shotcraft",
     "Vitorlindo201/Themata-Claude-Scribe",
     "VoltAgent/awesome-agent-skills",
     "Weizhena/Deep-Research-skills",
@@ -94,7 +93,6 @@
     "activeloopai/hivemind",
     "addyosmani/web-quality-skills",
     "adityaarsharma/youtube-marketing-skills",
-    "aeonfun/soul.md",
     "agiwhitelist/auteur",
     "ahacker-1/cre-agent-skills",
     "alec-c4/claude-rails-dev",
@@ -252,6 +250,7 @@
     "proyecto26/slides-ai-plugin",
     "radekamirko/C.R.I.S.P",
     "rampstackco/claude-skills",
+    "rebelytics/one-skill-to-rule-them-all",
     "respira-press/agent-skills-wordpress",
     "reticlehq/reticle",
     "rohitg00/awesome-claude-design",
@@ -296,6 +295,7 @@
     "vasilyu1983/AI-Agents-public",
     "vitaecontext/vitaecontext",
     "wanghuan9/skilldock",
+    "wanshuiyin/ALIGN-Agentic-Loop-Image-GeneratioN",
     "wanshuiyin/Anti-Autoresearch",
     "wanshuiyin/Auto-claude-code-research-in-sleep",
     "wesammustafa/Claude-Code-Everything-You-Need-to-Know",
@@ -314,132 +314,184 @@
   ],
   "skills": [
     {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/nextflow/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/llm-wiki/SKILL.md"
     },
     {
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/paperclip/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-lint/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/cloudflare-skills/skills/k2/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-query/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/agent-browser/skills/dogfood/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-dedup/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/stripe-skills/skills/metronome/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-agent/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/cloudflare-skills/skills/basin/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-setup/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/supabase-skills/skills/supabase/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-ingest/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/agent-browser/skills/webmcp-gen/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-switch/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/stripe-skills/skills/stripe-docs/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-digest/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/stripe-skills/skills/stripe-apps/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-status/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/agent-browser/skills/derive-client/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-import/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/stripe-skills/skills/connect-recommend/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-export/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/reading-livekit-docs/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-update/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/testing-livekit-agents/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-narrate/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/building-livekit-agents/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/tag-taxonomy/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/operating-livekit-agents/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/daily-update/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/debugging-livekit-agents/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-rebuild/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/writing-livekit-scenarios/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/cross-linker/SKILL.md"
     },
     {
-      "repo": "fcakyon/claude-codex-settings",
-      "path": "plugins/livekit-skills/skills/running-livekit-simulations/SKILL.md"
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-capture/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/skill-creator/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/session-brain/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-research/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/memory-bridge/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-dashboard/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/graph-colorize/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/impl-validator/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/session-search/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-synthesize/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/code-understand/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-stage-commit/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-context-pack/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/pi-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/vault-skill-factory/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/wiki-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/codex-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/claude-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/hermes-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/copilot-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/openclaw-history-ingest/SKILL.md"
+    },
+    {
+      "repo": "Ar9av/obsidian-wiki",
+      "path": ".skills/obsidian-layout-adjustment/SKILL.md"
     },
     {
       "repo": "gooseworks-ai/goose-skills",
-      "path": "skills/ads/capabilities/review-finished-ad/SKILL.md"
+      "path": "skills/ads/playbooks/video-production-harness/SKILL.md"
     },
     {
-      "repo": "gooseworks-ai/goose-skills",
-      "path": "skills/ads/capabilities/write-video-ad-script/SKILL.md"
+      "repo": "rebelytics/one-skill-to-rule-them-all",
+      "path": "SKILL.md"
     },
     {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "plugin-example/skills/review/SKILL.md"
+      "repo": "reticlehq/reticle",
+      "path": "skills/verify-pagination/SKILL.md"
     },
     {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/commit/SKILL.md"
+      "repo": "reticlehq/reticle",
+      "path": "skills/verify-login-logout/SKILL.md"
     },
     {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/onboard/SKILL.md"
-    },
-    {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/refactor/SKILL.md"
-    },
-    {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/fix-issue/SKILL.md"
-    },
-    {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/code-review/SKILL.md"
-    },
-    {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/release-notes/SKILL.md"
-    },
-    {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/pr-description/SKILL.md"
-    },
-    {
-      "repo": "justxor/claude-code-pro-course",
-      "path": "starter-kit/.claude/skills/write-tests/SKILL.md"
-    },
-    {
-      "repo": "latent-spaces/brag",
-      "path": "skills/brag/SKILL.md"
-    },
-    {
-      "repo": "latent-spaces/brag",
-      "path": "skills/brag-slim/SKILL.md"
+      "repo": "reticlehq/reticle",
+      "path": "skills/verify-optimistic-update/SKILL.md"
     }
   ]
 }

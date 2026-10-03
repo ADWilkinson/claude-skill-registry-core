@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T04:56:15.682523Z",
+  "updated_at": "2026-10-03T07:44:21.131882Z",
   "total_count": 1684,
   "entries": {
     "Xquik-dev/x-twitter-scraper": {
@@ -9199,33 +9199,36 @@
       "repo": "Chris1220-cmd/deep-research-skill",
       "branch": "master",
       "relative_path": "SKILL.md",
-      "updated_at": "2026-07-14T03:03:55.675449Z"
+      "commit_sha": "2b15a8cb1fc985ebcad9f02df851671b60cbb083",
+      "updated_at": "2026-10-03T07:44:13.505484Z"
     },
     "yusufkaraaslan/Skill_Seekers:name:skill-seekers": {
       "repo": "yusufkaraaslan/Skill_Seekers",
       "branch": "main",
       "relative_path": "skills/skill-seekers/SKILL.md",
       "commit_sha": "d26c2e3e0384c664a6fcc71ca10ddcd26026ac0b",
-      "updated_at": "2026-10-02T04:56:10.160195Z"
+      "updated_at": "2026-10-03T07:44:15.384699Z"
     },
     "lackeyjb/playwright-skill:name:playwright-skill": {
       "repo": "lackeyjb/playwright-skill",
       "branch": "main",
       "relative_path": "skills/playwright-skill/SKILL.md",
       "commit_sha": "dd47a6a023e249eb1b36e9e943eab89d0900865d",
-      "updated_at": "2026-10-02T04:56:09.341964Z"
+      "updated_at": "2026-10-03T07:44:15.180583Z"
     },
     "ToniPerea/humanizar-texto-es:name:humanizar-texto-es": {
       "repo": "ToniPerea/humanizar-texto-es",
       "branch": "main",
       "relative_path": "SKILL.md",
-      "updated_at": "2026-07-14T03:03:55.502294Z"
+      "commit_sha": "da5388524250b72d59c15038813813c7b6adb0e8",
+      "updated_at": "2026-10-03T07:44:13.472637Z"
     },
     "getterdoneinc/skill:name:getterdone": {
       "repo": "getterdoneinc/skill",
       "branch": "main",
       "relative_path": "SKILL.md",
-      "updated_at": "2026-07-14T03:03:55.596056Z"
+      "commit_sha": "7f1d108d1700f296fa7804e70ad81c5a1fccdb20",
+      "updated_at": "2026-10-03T07:44:13.607168Z"
     },
     "bin1874/before-you-build-skill:name:before-you-build": {
       "repo": "bin1874/before-you-build-skill",
@@ -9249,7 +9252,8 @@
       "repo": "b33kman/professional-business-writing-skill",
       "branch": "main",
       "relative_path": "SKILL.md",
-      "updated_at": "2026-07-14T03:03:55.705786Z"
+      "commit_sha": "235554a294516954d2eb0d64cbeb8930190b1586",
+      "updated_at": "2026-10-03T07:44:14.593821Z"
     },
     "alonw0/web-asset-generator:name:web-asset-generator": {
       "repo": "alonw0/web-asset-generator",
@@ -9268,7 +9272,7 @@
       "branch": "main",
       "relative_path": "skills/pagerunner-skill/SKILL.md",
       "commit_sha": "de62d40327b23023f3153424e09f0d4658c72cbb",
-      "updated_at": "2026-10-02T04:56:09.626104Z"
+      "updated_at": "2026-10-03T07:44:15.528956Z"
     },
     "miningstore/confluence-to-agent-knowledge-base:name:confluence-to-agent-knowledge-base": {
       "repo": "miningstore/confluence-to-agent-knowledge-base",
@@ -9472,7 +9476,8 @@
       "repo": "connerkward/lookdev-auto-skill",
       "branch": "main",
       "relative_path": "SKILL.md",
-      "updated_at": "2026-07-14T03:03:55.566341Z"
+      "commit_sha": "f8c2fa0a5d58bb8f5d045ff8d3b7ba9e9f1d74a0",
+      "updated_at": "2026-10-03T07:44:14.458578Z"
     },
     "Zion74/candidate-source-audit:name:candidate-source-audit": {
       "repo": "Zion74/candidate-source-audit",
@@ -9484,7 +9489,8 @@
       "repo": "connerkward/macos-screen-recorder-system-audio",
       "branch": "main",
       "relative_path": "SKILL.md",
-      "updated_at": "2026-07-14T03:03:55.902148Z"
+      "commit_sha": "95cc6006ed64fc11b813d00d459df858e7cfe392",
+      "updated_at": "2026-10-03T07:44:14.471218Z"
     },
     "connerkward/deterministic-design-skill:name:deterministic-design": {
       "repo": "connerkward/deterministic-design-skill",
@@ -9574,7 +9580,6 @@
       "repo": "RS42-AI/scout-ai-lite",
       "branch": "main",
       "relative_path": "SKILL.md",
-      "commit_sha": "a4d22c97a3c9b3b6a6a57a86acab82cfaf89a921",
       "updated_at": "2026-10-02T04:56:07.585407Z"
     },
     "Dicklesworthstone/slb:name:unknown": {
@@ -9623,7 +9628,6 @@
       "repo": "tostechbr/sdk-apps-openai",
       "branch": "main",
       "relative_path": "skill.md",
-      "commit_sha": "fd1fbb3acedd22175bad0c24a9c465dcc7933f18",
       "updated_at": "2026-10-02T04:56:07.323194Z"
     },
     "fredsun/CodeDiary:name:unknown": {
@@ -9967,7 +9971,7 @@
       "branch": "master",
       "relative_path": "skills/consilium-principis/SKILL.md",
       "commit_sha": "7c9bc194bc7e6705a5cfdaf3be7af9d3ea5a9660",
-      "updated_at": "2026-10-02T04:56:03.806976Z"
+      "updated_at": "2026-10-03T07:44:12.170656Z"
     },
     "ilyautov/small-business-ru:small-business-ru/skills/content-strategy": {
       "repo": "ilyautov/small-business-ru",

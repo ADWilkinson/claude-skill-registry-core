@@ -3063,3 +3063,103 @@ def test_main_cleanup_only_runs_ci_archive_cleanup(monkeypatch):
     module.main()
 
     assert captured["output_dir"].name == "skills"
+
+
+@pytest.mark.parametrize(
+    ("resolved_path", "existing_repo", "existing_path", "pin_commit_sha", "expected_skipped"),
+    [
+        ("SKILL.md", "acme/demo", "SKILL.md", True, True),
+        ("skills/new/SKILL.md", "acme/demo", "SKILL.md", True, False),
+        ("SKILL.md", "acme/other", "SKILL.md", True, False),
+        ("SKILL.md", "acme/demo", "SKILL.md", False, False),
+    ],
+)
+def test_pathless_download_reuses_only_verified_resolved_archive(
+    tmp_path, monkeypatch, resolved_path, existing_repo, existing_path,
+    pin_commit_sha, expected_skipped,
+):
+    module = load_module()
+    repo, sha = "acme/demo", "c" * 40
+    body = b"---\nname: current-display-name\ndescription: Current upstream skill.\n---\n# Demo\n"
+    archive = tmp_path / "skills/development/existing"
+    archive.mkdir(parents=True)
+    (archive / "SKILL.md").write_bytes(b"# Existing archived body\n")
+    (archive / "LICENSE").write_bytes(b"Existing support bytes\n")
+    (archive / "metadata.json").write_text(json.dumps({
+        "repo": existing_repo, "path": existing_path, "name": "different-old-name",
+        "archive_mode": "directory", "bundled_files": ["LICENSE"],
+    }))
+    before = {p.name: p.read_bytes() for p in archive.iterdir()}
+    skill = {"repo": repo, "path": "", "name": "current-display-name", "category": "development"}
+    registry = tmp_path / "registry.json"
+    registry.write_text(json.dumps({"skills": [skill]}))
+    manifest = tmp_path / "manifest.json"
+    manifest.write_text(json.dumps({"entries": {load_support_module().build_manifest_key(
+        repo, "", skill["name"], "development"
+    ): {"repo": repo, "branch": "main", "relative_path": resolved_path}}}))
+    routes = exact_repo_routes(repo, "main", sha, [git_blob_entry(resolved_path, body)])
+    routes[f"https://raw.githubusercontent.com/{repo}/{sha if pin_commit_sha else 'main'}/{resolved_path}"] = FakeResponse(200, body=body)
+    install_fake_aiohttp(monkeypatch, routes)
+    observations = tmp_path / "observations.jsonl"
+    stats = asyncio.run(module.download_skills(
+        registry, tmp_path / "skills", manifest_path=manifest,
+        pin_commit_sha=pin_commit_sha, observations_output_path=observations,
+    ))
+    rows = [json.loads(line) for line in observations.read_text().splitlines()]
+    assert stats["downloaded"] == int(not expected_skipped)
+    assert stats["failed"] == 0
+    assert stats["skipped"] == 1 + int(expected_skipped)
+    assert stats["url_attempts"] == 1
+    if expected_skipped:
+        assert {p.name: p.read_bytes() for p in archive.iterdir()} == before
+        assert rows[0]["outcome"] == "skipped"
+        assert rows[0]["failure_reason"] == "existing"
+        assert rows[0]["resolved_relative_path"] == resolved_path
+        assert rows[0]["resolved_commit_sha"] == sha
+        assert rows[0]["attempts"] == 1
+    else:
+        assert rows[0]["outcome"] == "downloaded"
+
+
+@pytest.mark.parametrize("failure", ["403", "404", "truncated", "invalid_content", "blob_mismatch"])
+def test_pathless_resolved_existing_skip_preserves_verification_failures(
+    tmp_path, monkeypatch, failure,
+):
+    module = load_module()
+    repo, sha = "acme/demo", "d" * 40
+    body = b"---\nname: demo\ndescription: Current upstream skill.\n---\n# Demo\n"
+    if failure == "invalid_content":
+        body = b"---\nname: demo\n---\n"
+    archive = tmp_path / "skills/development/existing"
+    archive.mkdir(parents=True)
+    (archive / "SKILL.md").write_bytes(b"# Original archive\n")
+    (archive / "metadata.json").write_text(json.dumps({"repo": repo, "path": "SKILL.md"}))
+    before = {p.name: p.read_bytes() for p in archive.iterdir()}
+    registry = tmp_path / "registry.json"
+    registry.write_text(json.dumps({"skills": [{
+        "repo": repo, "path": "", "name": "demo", "category": "development",
+    }]}))
+    manifest = tmp_path / "manifest.json"
+    manifest.write_text(json.dumps({"entries": {load_support_module().build_manifest_key(
+        repo, "", "demo", "development"
+    ): {"repo": repo, "branch": "main", "relative_path": "SKILL.md"}}}))
+    routes = exact_repo_routes(repo, "main", sha, [git_blob_entry("SKILL.md", body)])
+    if failure == "truncated":
+        routes[f"https://api.github.com/repos/{repo}/git/trees/{sha}?recursive=1"] = FakeResponse(
+            200, json_payload={"truncated": True, "tree": [git_blob_entry("SKILL.md", body)]}
+        )
+    routes[f"https://raw.githubusercontent.com/{repo}/{sha}/SKILL.md"] = FakeResponse(
+        int(failure) if failure in {"403", "404"} else 200,
+        body=b"changed unverified bytes" if failure == "blob_mismatch" else body,
+    )
+    install_fake_aiohttp(monkeypatch, routes)
+    observations = tmp_path / "observations.jsonl"
+    stats = asyncio.run(module.download_skills(
+        registry, tmp_path / "skills", manifest_path=manifest,
+        pin_commit_sha=True, observations_output_path=observations,
+    ))
+    assert stats["downloaded"] == 0
+    assert stats["failed"] == 1
+    assert stats["skipped"] == 1
+    assert {p.name: p.read_bytes() for p in archive.iterdir()} == before
+    assert all(json.loads(line)["outcome"] != "skipped" for line in observations.read_text().splitlines())

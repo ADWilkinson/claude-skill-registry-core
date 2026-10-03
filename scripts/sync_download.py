@@ -336,7 +336,7 @@ async def download_skills(
             listing_fetcher=fetch_contents_listing,
         )
 
-    async def try_download(session: aiohttp.ClientSession, skill: dict) -> bool:
+    async def try_download(session: aiohttp.ClientSession, skill: dict) -> bool | None:
         name = (skill.get("name") or "").strip() or "unknown"
         normalized_name = normalize_name(name)
         repo = normalize_download_repo(skill.get("repo", ""))
@@ -477,6 +477,23 @@ async def download_skills(
                                     and len(content) > 50
                                     and ("---" in content[:50] or "#" in content[:100])
                                 ):
+                                    if (
+                                        not path
+                                        and pinned_tree_result is not None
+                                        and skill_key({"repo": repo, "path": relative_path}) in existing
+                                    ):
+                                        stats["url_attempts"] += attempts
+                                        add_observation(
+                                            skill,
+                                            outcome="skipped",
+                                            failure_reason="existing",
+                                            attempts=attempts,
+                                            manifest_hit=manifest_entry is not None,
+                                            branch=branch,
+                                            relative_path=relative_path,
+                                            commit_sha=download_ref,
+                                        )
+                                        return None
                                     content_requires_complete_archive = (
                                         requires_complete_bundled_archive(source_text)
                                         or requires_complete_bundled_archive(content)
@@ -694,6 +711,9 @@ async def download_skills(
             results = await asyncio.gather(*tasks, return_exceptions=True)
 
             for skill, result in zip(batch, results, strict=True):
+                if result is None:
+                    stats["skipped"] += 1
+                    continue
                 succeeded, internal_error = classify_download_result(skill, result)
                 if succeeded:
                     stats["downloaded"] += 1

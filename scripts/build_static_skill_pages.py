@@ -42,6 +42,7 @@ def group_skill_copies(records: Iterable[dict[str, Any]]) -> list[dict[str, Any]
             int(item.get("quality_score", 0) or 0),
             int(item.get("stars", 0) or 0),
             str(item.get("install") or ""),
+            str(item.get("branch") or "main"),
         ))
         record = dict(representative)
         record["copies"] = sorted(
@@ -86,7 +87,12 @@ def skill_page_slug(record: dict[str, Any]) -> str:
 def _source_url(record: dict[str, Any], *, directory: bool = False) -> str:
     repo = quote(str(record.get("repo") or ""), safe="/")
     branch = quote(str(record.get("branch") or "main"), safe="")
-    path = quote(str(record.get("path") or "").strip("/"), safe="/")
+    source_path = str(record.get("path") or "").strip("/")
+    if source_path.casefold() == "skill.md":
+        source_path = ""
+    elif source_path.casefold().endswith("/skill.md"):
+        source_path = source_path.rsplit("/", 1)[0]
+    path = quote(source_path, safe="/")
     base = f"https://github.com/{repo}/{'tree' if directory else 'blob'}/{branch}"
     if directory:
         return f"{base}/{path}" if path else base
@@ -104,7 +110,7 @@ def _render_detail_page(record: dict[str, Any], slug: str, related: list[dict[st
     repo = esc(record.get("repo") or "")
     tags = "".join(f'<span class="tag">{esc(tag)}</span>' for tag in record.get("tags", []))
     copies = record.get("copies", [record])
-    copy_links = "".join(f'<li><a href="{esc(_source_url(copy))}">{esc(copy.get("install") or copy.get("repo"))}</a></li>' for copy in copies[:10])
+    copy_links = "".join(f'<li><a href="{esc(_source_url(copy))}">{esc(copy.get("install") or copy.get("repo"))}</a> ({esc(copy.get("branch") or "main")})</li>' for copy in copies)
     similar = "".join(f'<a class="related" href="../{skill_page_slug(item)}/"><strong>{esc(item["name"])}</strong><span>{esc(item.get("description", ""))[:160]}</span></a>' for item in related)
     license_name = record.get("license") or "Not declared in registry metadata"
     if license_name == "NOASSERTION":

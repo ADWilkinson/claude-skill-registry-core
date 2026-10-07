@@ -72,7 +72,7 @@ function createLeaderboardCard(skill, rank) {
     const isOfficial = skill.c === 'off';
 
     return `
-        <div class="leaderboard-card ${rankClass}" data-install="${escapeHtml(install)}" onclick="showSkillDetail(this)">
+        <div class="leaderboard-card ${rankClass}" data-install="${escapeHtml(install)}" data-branch="${escapeHtml(skill.b || 'main')}" onclick="showSkillDetail(this)">
             <div class="rank ${rankClass}">${rankIcon || '#' + rank}</div>
             <div class="leaderboard-info">
                 <div class="leaderboard-header">
@@ -103,7 +103,7 @@ function showStats() {
     const categoryCount = state.categories.length || getNumericStat('categories', 0);
     const pluginCount = state.plugins.length || getNumericStat('total_plugins', 0);
 
-    document.getElementById('stat-total').textContent = totalSkills.toLocaleString();
+    document.getElementById('stat-total').textContent = totalSkills === null ? '—' : totalSkills.toLocaleString();
     document.getElementById('stat-repos').textContent = uniqueRepos.toLocaleString();
     document.getElementById('stat-plugins').textContent = pluginCount.toLocaleString();
     document.getElementById('stat-categories').textContent = categoryCount;
@@ -123,10 +123,7 @@ function getNumericStat(key, fallback) {
 }
 
 function getTotalSkillCount() {
-    return getNumericStat(
-        'registry_skill_count_dedup',
-        Number(state.index?.t || state.index?.s?.length || 0)
-    );
+    return getNumericStat('independent_skill_count', null);
 }
 
 function getCategoryCount(code) {
@@ -162,7 +159,7 @@ function renderCategoryChart() {
     }
 
     const maxCount = sorted[0][1];
-    const totalSkills = getTotalSkillCount();
+    const totalSkills = sorted.reduce((total, [, count]) => total + count, 0);
 
     chartContainer.innerHTML = sorted.map(([code, count, name]) => {
         const color = CATEGORY_COLORS[code] || '#576574';
@@ -381,6 +378,7 @@ function showRandomSkill() {
     // Create a temporary card element to pass to showSkillDetail
     const tempCard = document.createElement('div');
     tempCard.dataset.install = skill.i;
+    tempCard.dataset.branch = skill.b || 'main';
     showSkillDetail(tempCard);
 }
 
@@ -393,6 +391,7 @@ function createSkillCard(skill, isFeatured = false, showFavoriteBtn = true) {
     const tags = isFeatured ? (skill.tags || []) : (skill.g || []);
     const stars = isFeatured ? skill.stars : skill.r;
     const install = isFeatured ? skill.install : skill.i;
+    const branch = (isFeatured ? skill.branch : skill.b) || 'main';
 
     const isFavorite = state.favorites.includes(install);
     const isOfficial = categoryCode === 'off' || categoryCode === 'official';
@@ -402,7 +401,7 @@ function createSkillCard(skill, isFeatured = false, showFavoriteBtn = true) {
     ).join('');
 
     return `
-        <div class="skill-card" data-install="${escapeHtml(install)}" onclick="showSkillDetail(this)">
+        <div class="skill-card" data-install="${escapeHtml(install)}" data-branch="${escapeHtml(branch)}" onclick="showSkillDetail(this)">
             <div class="skill-header">
                 <span class="skill-name">
                     ${skill.u ? `<a href="${escapeHtml(skill.u)}" onclick="event.stopPropagation()">${escapeHtml(name)}</a>` : escapeHtml(name)}
@@ -460,10 +459,12 @@ function displayResults() {
 // Show skill detail modal with similar skills
 async function showSkillDetail(card) {
     const install = card.dataset.install;
+    const branch = card.dataset.branch || 'main';
+    const matchesSource = skill => skill.i === install && (skill.b || 'main') === branch;
 
     // Find skill in the loaded startup index or the current lazy-loaded result page.
-    const skill = state.index.s.find(s => s.i === install)
-        || state.results.map(result => result.item).find(s => s.i === install);
+    const skill = state.index.s.find(matchesSource)
+        || state.results.map(result => result.item).find(matchesSource);
     if (!skill) return;
 
     const tagsHtml = (skill.g || []).map(tag =>
@@ -480,7 +481,7 @@ async function showSkillDetail(card) {
             <h4>Similar Skills</h4>
             <div class="similar-grid">
                 ${similarSkills.map(s => `
-                    <div class="similar-card" data-install="${escapeHtml(s.i)}" onclick="showSkillDetail(this)">
+                    <div class="similar-card" data-install="${escapeHtml(s.i)}" data-branch="${escapeHtml(s.b || 'main')}" onclick="showSkillDetail(this)">
                         <span class="similar-name">${escapeHtml(s.n)}</span>
                         <span class="similar-stars">${s.r > 0 ? '⭐' + s.r.toLocaleString() : ''}</span>
                     </div>
@@ -501,6 +502,7 @@ async function showSkillDetail(card) {
         </div>
         <p style="margin-bottom: 1rem; color: var(--text-secondary);">${escapeHtml(skill.d)}</p>
         ${skill.u ? `<p><a href="${escapeHtml(skill.u)}">Open full skill guide →</a></p>` : ''}
+        <section id="skill-source-copies" aria-live="polite"></section>
 
         <div style="margin-bottom: 1rem;">
             <strong>Category:</strong> ${escapeHtml(categoryDisplayName(skill.c))}<br>
@@ -557,9 +559,32 @@ async function showSkillDetail(card) {
     `;
 
     elements.modal.classList.remove('hidden');
+    loadSkillSourceCopies(skill);
 
     // Load community stats and comments
     loadCommunityData(install);
+}
+
+async function loadSkillSourceCopies(skill) {
+    const container = document.getElementById('skill-source-copies');
+    const canonicalId = skill.canonical_id;
+    if (!container || !canonicalId) return;
+    container.innerHTML = `<h4>Found in ${Number(skill.copies).toLocaleString()} repositories</h4><p>Loading matching sources…</p>`;
+    try {
+        const shard = await fetchJson(`skill-detail-shards/${canonicalId[0]}.json`);
+        const canonical = shard.skills.find(record => record.id === canonicalId);
+        if (!canonical) throw new Error('Matching sources are unavailable');
+        if (container !== document.getElementById('skill-source-copies')) return;
+        const links = canonical.source_copies.map(copy =>
+            `<li><a href="${escapeHtml(getGitHubUrl(copy.install, copy.branch))}" target="_blank" rel="noopener noreferrer">${escapeHtml(copy.install)}</a> (${escapeHtml(copy.branch)})</li>`
+        ).join('');
+        container.innerHTML = `<h4>Found in ${canonical.copies.toLocaleString()} repositories</h4><p>Matching Markdown bodies and names. The selected representative does not establish original authorship.</p><ul>${links}</ul>`;
+    } catch (error) {
+        if (container === document.getElementById('skill-source-copies')) {
+            container.innerHTML = '<p>Matching sources could not be loaded. Please try again.</p>';
+        }
+        console.error('Failed to load skill sources:', error);
+    }
 }
 
 // Load community data (stats + comments)

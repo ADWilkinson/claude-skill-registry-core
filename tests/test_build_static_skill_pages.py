@@ -12,6 +12,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 from build_static_skill_pages import (  # noqa: E402
     PUBLIC_SITE,
+    _source_url,
     build_static_skill_pages,
     group_skill_copies,
     select_featured_skills,
@@ -188,6 +189,33 @@ def test_selection_quality_and_first_wave_limit():
     selected = select_featured_skills(records)
     assert len(selected) == 5800
     assert not {"thin", "poor"}.intersection(record["name"] for record in selected)
+
+
+def test_representative_branch_ties_are_order_independent():
+    first = skill("review", content_fingerprint="same", branch="main")
+    second = dict(first, branch="next")
+    assert group_skill_copies([first, second]) == group_skill_copies([second, first])
+
+
+def test_static_detail_lists_every_matching_source(tmp_path):
+    copies = [skill("review", repo=f"acme/source-{index}", install=f"acme/source-{index}/review",
+                    content_fingerprint="same", branch="next") for index in range(12)]
+    [group] = group_skill_copies(copies)
+    build_static_skill_pages([group], tmp_path)
+    detail = (tmp_path / "skills" / group["page_slug"] / "index.html").read_text()
+    assert "Found in 12 repositories" in detail
+    for copy in copies:
+        assert copy["install"] in detail
+    assert "(next)" in detail
+
+
+@pytest.mark.parametrize("path", ["", "skills/review", "skills/review/SKILL.md", "SKILL.md"])
+def test_source_links_handle_file_and_directory_paths(path):
+    record = skill("review", repo="acme/repo", path=path, branch="feature/next")
+    directory = "skills/review" if path.startswith("skills/review") else ""
+    expected_base = "https://github.com/acme/repo"
+    assert _source_url(record) == f"{expected_base}/blob/feature%2Fnext/{directory + '/' if directory else ''}SKILL.md"
+    assert _source_url(record, directory=True) == f"{expected_base}/tree/feature%2Fnext{('/' + directory) if directory else ''}"
 
 
 def test_page_attribution_related_guides_and_archive_entrypoints(tmp_path):

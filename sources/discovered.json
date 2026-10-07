@@ -1,7 +1,7 @@
 {
-  "discovered_at": "2026-10-06T05:45:23.992723Z",
+  "discovered_at": "2026-10-07T05:13:05.957213Z",
   "total_repos": 300,
-  "total_skills": 104,
+  "total_skills": 30,
   "scanned_repos": 300,
   "limits": {
     "max_repos": 300,
@@ -69,6 +69,7 @@
     "Othmane-Khadri/gtm-engineer-playbook",
     "OutlineDriven/odin-claude-plugin",
     "Prat011/awesome-llm-skills",
+    "QingYunA/answer-me-with-html",
     "REMvisual/claude-handoff",
     "Rtur2003/Claude-Code-Promts-Skills",
     "Ryze-AI-Adgent/open-seo-mcp-skills",
@@ -91,6 +92,7 @@
     "a5c-ai/babysitter",
     "aaddrick/attention-control",
     "aaddrick/building-with-typesafe-jev",
+    "aaddrick/contrarian",
     "activeloopai/hivemind",
     "addyosmani/web-quality-skills",
     "adityaarsharma/youtube-marketing-skills",
@@ -140,7 +142,6 @@
     "deanpeters/Product-Manager-Skills",
     "decebals/claude-code-java",
     "dembrandt/dembrandt-skills",
-    "dongshuyan/compass-skills",
     "drayline/rootnode-skills",
     "dream-num/skills",
     "drobins25/craft",
@@ -185,7 +186,6 @@
     "jangviktor-web/nihaixia",
     "jeecgboot/skills",
     "jezweb/claude-skills",
-    "jiweiyeah/Skills-Manager",
     "joetawil7/first-pass",
     "joeyvansommeren/journey-mapper",
     "jomeswang/agnes-ai-skill",
@@ -230,13 +230,13 @@
     "nWave-ai/nWave",
     "nanocoai/nanoclaw",
     "netresearch/claude-code-marketplace",
-    "nexscope-ai/Amazon-Skills",
     "nexscope-ai/eCommerce-Skills",
     "nexu-io/html-anything",
     "nidhinjs/prompt-master",
     "nostrband/ServiceGraph",
     "nowork-studio/notfair-plugin",
     "nuwa-skills/awesome-nuwa",
+    "oil-oil/oil-ui",
     "oliver-kriska/claude-elixir-phoenix",
     "ombulabs/claude-code_rails-upgrade-skill",
     "omergocmen/vibe-coder-kit",
@@ -314,420 +314,124 @@
   ],
   "skills": [
     {
-      "repo": "lool-ventures/founder-skills",
-      "path": "founder-skills/skills/feedback/SKILL.md"
+      "repo": "Avijit07x/claude-db",
+      "path": "skills/handoff/SKILL.md"
     },
     {
-      "repo": "michael-denyer/pstack-claude",
-      "path": "plugins/pstack/skills/poteto-help/SKILL.md"
+      "repo": "Avijit07x/claude-db",
+      "path": "skills/catchup/SKILL.md"
+    },
+    {
+      "repo": "QingYunA/answer-me-with-html",
+      "path": "skills/answer-me-with-html/SKILL.md"
+    },
+    {
+      "repo": "aaddrick/contrarian",
+      "path": "skills/contrarian/SKILL.md"
+    },
+    {
+      "repo": "borghei/Claude-Skills",
+      "path": "engineering/security-audit/SKILL.md"
+    },
+    {
+      "repo": "gooseworks-ai/goose-skills",
+      "path": "skills/ads/capabilities/render-street-interview/SKILL.md"
+    },
+    {
+      "repo": "microsoft/power-platform-skills",
+      "path": "plugins/power-automate/skills/telemetry/SKILL.md"
     },
     {
       "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/devils-twin/SKILL.md"
+      "path": "skills/cn-fupan/SKILL.md"
     },
     {
       "repo": "mohitagw15856/pm-claude-skills",
-      "path": "skills-i18n/ja/lease-decoder/SKILL.md"
+      "path": "skills/fair-split/SKILL.md"
     },
     {
       "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/story-pitch/SKILL.md"
+      "path": "skills/jp-ringisho/SKILL.md"
     },
     {
       "repo": "mohitagw15856/pm-claude-skills",
-      "path": "exports/openclaw/clone-brief/SKILL.md"
+      "path": "skills/graduate-cv/SKILL.md"
     },
     {
       "repo": "mohitagw15856/pm-claude-skills",
-      "path": "skills-i18n/es/meeting-notes/SKILL.md"
+      "path": "skills/cn-5s-audit/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-llm/SKILL.md"
+      "repo": "mohitagw15856/pm-claude-skills",
+      "path": "skills/returner-cv/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-evals/SKILL.md"
+      "repo": "mohitagw15856/pm-claude-skills",
+      "path": "skills/cn-pipl-pia/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-mlops/SKILL.md"
+      "repo": "mohitagw15856/pm-claude-skills",
+      "path": "skills/academic-cv/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-agents/SKILL.md"
+      "repo": "mohitagw15856/pm-claude-skills",
+      "path": "skills/cn-8d-report/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/docs-ai-prd/SKILL.md"
+      "repo": "mohitagw15856/pm-claude-skills",
+      "path": "skills/ship-or-slip/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-debugging/SKILL.md"
+      "repo": "mohitagw15856/pm-claude-skills",
+      "path": "skills/executive-cv/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/document-pdf/SKILL.md"
+      "repo": "oil-oil/oil-ui",
+      "path": "SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/run-workflow/SKILL.md"
+      "repo": "plugin87/ux-ui-agent-skills",
+      "path": ".claude/skills/gate/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/research-git/SKILL.md"
+      "repo": "plugin87/ux-ui-agent-skills",
+      "path": ".claude/skills/ship/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/agents-hooks/SKILL.md"
+      "repo": "plugin87/ux-ui-agent-skills",
+      "path": ".claude/skills/critique/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/gamedev-godot/SKILL.md"
+      "repo": "plugin87/ux-ui-agent-skills",
+      "path": ".claude/skills/grill-me/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-resilience/SKILL.md"
+      "repo": "plugin87/ux-ui-agent-skills",
+      "path": ".claude/skills/scaffold-project/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/docs-codebase/SKILL.md"
+      "repo": "plugin87/ux-ui-agent-skills",
+      "path": "tests/fixtures/bad/bare-paths/.claude/skills/leaky/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ops-nuke-cicd/SKILL.md"
+      "repo": "sickn33/agentic-awesome-skills",
+      "path": "skills/court/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/document-docx/SKILL.md"
+      "repo": "sickn33/agentic-awesome-skills",
+      "path": "skills/shark/SKILL.md"
     },
     {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/data-metabase/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/agents-memory/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/document-pptx/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-voice-bots/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/document-xlsx/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-api-design/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/research-scout/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/data-streaming/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-ios/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-refactoring/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-bot-builder/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-pretraining/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/gamedev-roblox/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-vector-brain/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-search/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-scaling-laws/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-mobile/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-coding-agents/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-nunit/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-agent-testing/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-post-training/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-git-workflow/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-llm-inference/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-desktop/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-observability/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-context-layer/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-ml-timeseries/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-backend/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-docs-coverage/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-deep-research/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/agents-subagents/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-payments/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-devtools/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-realtime/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-mobile/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-frontend/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-android/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/product-management/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-persona-testing/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-ml-data-science/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/data-lake-platform/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-local-model-ops/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-ios-design/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ops-devops-platform/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-strategy/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-security-testing/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/product-help-center/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-ios-native/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-performance/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-code-review/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/research-arxiv-scout/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/docs-notes-retrieval/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-ux-research/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-crypto-web3/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-prompt-engineering/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-ui-ux-design/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ops-cost-optimization/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-workflow-planning/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-paas-hosting/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ops-incident-response/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-playwright/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-ai-coding-metrics/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-localisation/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-git-commit-message/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-coding-agents-state/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/qa-testing-performance/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-ios-ai-engine/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-accessibility/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-context-multi-repo/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-context-code-graph/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/foundations-game-theory/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-baas-platforms/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-ai-integration/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-distributed-training/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-csharp-backend/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/dev-context-engineering/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-android-native/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/software-android-design/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/ai-architecture-advisor/SKILL.md"
-    },
-    {
-      "repo": "vasilyu1983/AI-Agents-public",
-      "path": "skills/universal/foundations-team-theory/SKILL.md"
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "path": "skills/lean-formalize/SKILL.md"
     },
     {
       "repo": "wesammustafa/Claude-Code-Everything-You-Need-to-Know",
-      "path": ".github/scripts/fixtures/valid-example-kit/tree/examples/intermediate/01-first-skill/dot-claude/skills/five-whys/SKILL.md"
+      "path": "examples/intermediate/01-first-skill/dot-claude/skills/tdd/SKILL.md"
     },
     {
       "repo": "wesammustafa/Claude-Code-Everything-You-Need-to-Know",
-      "path": ".github/scripts/fixtures/skill-missing-description/tree/examples/intermediate/01-first-skill/dot-claude/skills/five-whys/SKILL.md"
+      "path": "examples/intermediate/01-first-skill/dot-claude/skills/five-whys/SKILL.md"
     }
   ]
 }

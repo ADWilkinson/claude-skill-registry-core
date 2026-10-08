@@ -5,6 +5,7 @@ on:
     paths:
       - "scripts/**"
       - "sources/community.json"
+      - "policy/community-retirements.json"
       - "schema/**"
       - "README.md"
       - "tests/**"

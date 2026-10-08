@@ -13,39 +13,53 @@ must preserve the checkout identified by its recorded `data_sha`.
 
 ## Locations
 
-- Core Pages base URL: `https://majiayu000.github.io/claude-skill-registry-core/`
 - Merged Pages base URL: `https://majiayu000.github.io/claude-skill-registry/`
+- Core raw base URL:
+  `https://raw.githubusercontent.com/majiayu000/claude-skill-registry-core/main/`
 - Merged artifact raw base URL:
   `https://raw.githubusercontent.com/majiayu000/claude-skill-registry/main/`
 
-Core Pages is optimized for the web app and public read APIs. The merged
-artifact is optimized for bulk registry compatibility and raw archive browsing.
+Merged Pages hosts the web app and public read APIs. Core remains the source
+of truth for generators and this contract; the merged artifact is the published
+output and also provides bulk registry compatibility through raw URLs.
+
+The legacy Core Pages base, `https://majiayu000.github.io/claude-skill-registry-core/`,
+is a browser migration page, not a JSON API compatibility layer. Its
+`stats.json` and `search-index.json` paths return HTML 404 responses. Clients
+using that base must switch to Merged Pages, for example:
+
+- `https://majiayu000.github.io/claude-skill-registry/stats.json`
+- `https://majiayu000.github.io/claude-skill-registry/search-index.json`
+
+The new `search-index.json` URL is still a compatibility pointer. Follow its
+manifest and shards as described below; changing the base does not restore the
+historical full payload.
 
 ## Public Entry Points
 
 | Path | Location | Contract |
 | --- | --- | --- |
-| `search-index-lite.json` | Core Pages | Startup catalog index with deduped summaries, quality/security signals, and `archive_path` for archived skills. |
+| `search-index-lite.json` | Merged Pages | Startup catalog index with deduped summaries, quality/security signals, and `archive_path` for archived skills. |
 | `skill-detail-shards/<prefix>.json` | Merged Pages | All deduped lite records for direct skill detail lookup, including records beyond the startup cap. |
-| `search-index.json` | Core Pages | Compatibility pointer for the full search payload. |
-| `search-index-manifest.json` | Core Pages | Full search shard manifest. |
-| `search-shards/part-000.json` | Core Pages | Full search shard part pattern. |
-| `featured.json` | Core Pages | Featured skills for the web app. |
-| `plugins.json` | Core Pages | Plugin catalog. |
-| `stats.json` | Core Pages | Generated counts, shard sizes, and summary statistics. |
-| `quality-index.json` | Core Pages | Compatibility pointer for quality records. |
-| `quality-index-manifest.json` | Core Pages | Quality shard manifest. |
-| `quality-shards/part-000.json` | Core Pages | Quality shard part pattern. |
-| `security-index.json` | Core Pages | Compatibility pointer for security records. |
-| `security-index-manifest.json` | Core Pages | Security shard manifest. |
-| `security-shards/part-000.json` | Core Pages | Security shard part pattern. |
-| `ranking-index.json` | Core Pages | Compatibility pointer for ranking records. |
-| `ranking-index-manifest.json` | Core Pages | Ranking shard manifest. |
-| `ranking-shards/part-000.json` | Core Pages | Ranking shard part pattern. |
-| `categories/index.json` | Core Pages | Category manifest index. |
-| `categories/<category>.json` | Core Pages | Legacy category compatibility pointer. |
-| `categories/<category>/manifest.json` | Core Pages | Category part manifest. |
-| `categories/<category>/part-000.json` | Core Pages | Category part pattern. |
+| `search-index.json` | Merged Pages | Compatibility pointer for the full search payload. |
+| `search-index-manifest.json` | Merged Pages | Full search shard manifest. |
+| `search-shards/part-000.json` | Merged Pages | Full search shard part pattern. |
+| `featured.json` | Merged Pages | Featured skills for the web app. |
+| `plugins.json` | Merged Pages | Plugin catalog. |
+| `stats.json` | Merged Pages | Generated counts, shard sizes, and summary statistics. |
+| `quality-index.json` | Merged Pages | Compatibility pointer for quality records. |
+| `quality-index-manifest.json` | Merged Pages | Quality shard manifest. |
+| `quality-shards/part-000.json` | Merged Pages | Quality shard part pattern. |
+| `security-index.json` | Merged Pages | Compatibility pointer for security records. |
+| `security-index-manifest.json` | Merged Pages | Security shard manifest. |
+| `security-shards/part-000.json` | Merged Pages | Security shard part pattern. |
+| `ranking-index.json` | Merged Pages | Compatibility pointer for ranking records. |
+| `ranking-index-manifest.json` | Merged Pages | Ranking shard manifest. |
+| `ranking-shards/part-000.json` | Merged Pages | Ranking shard part pattern. |
+| `categories/index.json` | Merged Pages | Category manifest index. |
+| `categories/<category>.json` | Merged Pages | Legacy category compatibility pointer. |
+| `categories/<category>/manifest.json` | Merged Pages | Category part manifest. |
+| `categories/<category>/part-000.json` | Merged Pages | Category part pattern. |
 | `registry_summary.json` | Core raw | Lightweight source summary and counts. |
 | `registry.json` | Merged raw | Compatibility pointer for the full registry payload. |
 | `registry-manifest.json` | Merged raw | Registry shard manifest. |

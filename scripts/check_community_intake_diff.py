@@ -13,6 +13,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from catalog_retirement import LEDGER_PATH, load_ledger, validate_retirement
 from category_taxonomy import category_slug, get_taxonomy
 from utils import classify_license
 
@@ -284,6 +285,46 @@ def validate_community_intake_diff(config: CommunityIntakeInput) -> list[str]:
     except RuntimeError as exc:
         return [str(exc)]
 
+    try:
+        # Missing ledgers on legacy refs authorize nothing; other git failures
+        # and malformed present ledgers fail closed.
+        def ledger_at(ref: str):
+            listing = subprocess.run(
+                ["git", "ls-tree", "--name-only", ref, "--", LEDGER_PATH],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            return load_ledger(_git_show(ref, Path(LEDGER_PATH))) if listing.stdout.strip() else []
+
+        prior = ledger_at(merge_base)
+        proposed = ledger_at(config.head_ref)
+        authorized = ledger_at(config.base_ref)
+        if proposed[: len(prior)] != prior:
+            return ["retirement ledger is append-only; existing decisions must be retained"]
+        base_payload, base_errors = _load_payload("base", base_text)
+        head_payload, head_errors = _load_payload("head", head_text)
+        if base_errors or head_errors:
+            return [*base_errors, *head_errors]
+        if proposed != prior and base_text != head_text:
+            return ["retirement authorization and catalog changes require separate PRs"]
+        for record in proposed[len(prior) :]:
+            if base_payload["skills"].count(record["entry"]) != 1:
+                return ["new retirement decisions must preserve one exact existing catalog row"]
+        if len(head_payload["skills"]) < len(base_payload["skills"]):
+            changed = subprocess.run(
+                ["git", "diff", "--name-only", merge_base, config.head_ref],
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.splitlines()
+            if changed != [config.path.as_posix()]:
+                return ["retirement PRs must change only the community catalog"]
+            if not authorized:
+                return validate_community_intake_text(base_text, head_text)
+            return validate_retirement(base_text, head_text, authorized)
+    except (RuntimeError, ValueError, subprocess.CalledProcessError) as exc:
+        return [f"retirement validation failed: {exc}"]
     return validate_community_intake_text(base_text, head_text)
 
 

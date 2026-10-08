@@ -76,3 +76,42 @@ Core (source of truth) ──► Data (skills archive) ──► Main (publish a
 - **Core**: `majiayu000/claude-skill-registry-core` — scripts, sources, CI/CD
 - **Data**: `majiayu000/claude-skill-registry-data` — archived `SKILL.md` tree
 - **Main**: `majiayu000/claude-skill-registry` — merged artifact published from pinned core + data refs
+
+## Maintainer-reviewed catalog retirement
+
+Community intake remains append-only. An unavailable URL (including a GitHub
+404), contributor assertion, PR label, or proposed replacement does not authorize
+retirement. Source retirement is separate from author takedowns in [REMOVAL.md](REMOVAL.md).
+
+Use two separate PRs:
+
+1. A maintainer verifies the evidence and records an explicit decision in a core
+   issue or PR. An authorization-only PR appends a record to
+   `policy/community-retirements.json`, copying the complete existing catalog
+   row into `entry`, with a nonempty `reason`, the public `decision_url`, and
+   `archive_policy: "retain"`. Review and merge that decision through the
+   repository's normal maintainer process. Do not combine it with a removal.
+2. A subsequent PR removes only those exact rows from `sources/community.json`.
+   Do not edit, reorder, add, or reformat surviving rows; the final surviving
+   row may lose its trailing comma. Multiple removals each need their own exact
+   pre-existing authorization. No other file may change in the removal PR.
+
+The guard reads authorizations from the target base commit, never from a new
+record in the removal branch. Missing legacy ledgers authorize no retirement;
+malformed ledgers fail closed. Decisions are append-only audit records. If row
+metadata has changed, append a new exact-row decision in a separate reviewed
+authorization PR; preserve the old decision rather than broadening it. A URL is
+validated for shape only; maintainers must verify its contents and authority. The command-line interface is unchanged; the text-only validator
+continues to enforce ordinary append-only intake.
+
+This is a maintainer-reviewed process, not a security attestation: the existing
+workflow runs checker code from the PR head. Maintainers must review ledger,
+checker, and workflow changes before merging; this adds no label bypass, API
+approval check, token permission, or branch-protection setting.
+
+Historical archived content is retained by this procedure. Removing a source
+row neither deletes the data archive nor removes generated listings or Git
+history, and does not guarantee that another discovery route cannot find the
+source again. Archive deletion, re-import blocking, replacement validation,
+and publishing require separate decisions and work. Never describe catalog
+retirement alone as a completed takedown.

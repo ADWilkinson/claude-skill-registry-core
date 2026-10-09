@@ -1,7 +1,7 @@
 {
-  "discovered_at": "2026-10-08T05:25:00.182533Z",
+  "discovered_at": "2026-10-09T05:26:06.081976Z",
   "total_repos": 300,
-  "total_skills": 49,
+  "total_skills": 13,
   "scanned_repos": 300,
   "limits": {
     "max_repos": 300,
@@ -98,6 +98,7 @@
     "agiwhitelist/auteur",
     "ahacker-1/cre-agent-skills",
     "alec-c4/claude-rails-dev",
+    "alexgreensh/anidoodle",
     "alexgreensh/attention-span",
     "alirezarezvani/claude-code-skill-factory",
     "alirezarezvani/claude-skills",
@@ -132,7 +133,6 @@
     "coldteadotai/pr-lens",
     "composio-community/awesome-claude-plugins",
     "conorluddy/ios-simulator-skill",
-    "coreyhaines31/makerskills",
     "coreyhaines31/marketingskills",
     "costiash/claude-code-docs",
     "cybrixcc/cybrix-skills",
@@ -204,7 +204,6 @@
     "latent-spaces/brag",
     "levi-qiao/longgraph-skill",
     "levnikolaevich/claude-code-skills",
-    "liarjsdev/liarjs-skills",
     "liustack/modlens",
     "ljagiello/ctf-skills",
     "longbridge/skills",
@@ -274,6 +273,7 @@
     "sickn33/agentic-awesome-skills",
     "skyf0xx/hedgehog",
     "slimeglitch/gryffin-calorai-ventus",
+    "sno-ai/sno-station-skills",
     "specstoryai/getspecstory",
     "suboss87/FDEOps",
     "sunchaokun/PPT-Design-Skill",
@@ -314,200 +314,56 @@
   ],
   "skills": [
     {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-diff/SKILL.md"
+      "repo": "code-yeongyu/oh-my-openagent",
+      "path": "packages/omo-senpi/skills/visualize/SKILL.md"
     },
     {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-brand/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-recon/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-build/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-launch/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-deploy/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-design/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-backend/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-architect/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-entrepreneur/SKILL.md"
-    },
-    {
-      "repo": "Jakeschincariol/replica-skill",
-      "path": "replica-test/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/cro/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/aso/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/sms/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/ads/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/image/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/video/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/offers/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/emails/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/social/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/events/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/schema/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/signup/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/popups/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/launch/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/pricing/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/paywalls/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/analytics/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/referrals/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/onboarding/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/ab-testing/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/free-tools/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/prospecting/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/competitors/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/attribution/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/co-marketing/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/lead-magnets/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/marketing-plan/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/marketing-loops/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/public-relations/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/customer-research/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/product-marketing/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/marketing-council/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/community-marketing/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/competitor-profiling/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/influencer-marketing/SKILL.md"
-    },
-    {
-      "repo": "coreyhaines31/marketingskills",
-      "path": "skills/directory-submissions/SKILL.md"
+      "repo": "gooseworks-ai/goose-skills",
+      "path": "skills/ads/capabilities/render-apple-notes-chat/SKILL.md"
     },
     {
       "repo": "microsoft/power-platform-skills",
-      "path": "plugins/power-pages/skills/exceptional-web-design/SKILL.md"
+      "path": "plugins/process-intelligence/skills/setup/SKILL.md"
     },
     {
-      "repo": "timescale/pg-aiguide",
-      "path": "skills/timescaledb-hyperfunctions/SKILL.md"
+      "repo": "microsoft/power-platform-skills",
+      "path": "plugins/process-intelligence/skills/analytics/SKILL.md"
+    },
+    {
+      "repo": "microsoft/power-platform-skills",
+      "path": "plugins/process-intelligence/skills/report-issue/SKILL.md"
+    },
+    {
+      "repo": "microsoft/power-platform-skills",
+      "path": "plugins/process-intelligence/skills/derive-metric/SKILL.md"
+    },
+    {
+      "repo": "reticlehq/reticle",
+      "path": "skills/verify-language-switch/SKILL.md"
+    },
+    {
+      "repo": "scdenney/open-science-skills",
+      "path": "archive/codex/spawn/SKILL.md"
+    },
+    {
+      "repo": "scdenney/open-science-skills",
+      "path": "archive/claude/spawn/SKILL.md"
+    },
+    {
+      "repo": "scdenney/open-science-skills",
+      "path": "archive/codex/model-council-voting/SKILL.md"
+    },
+    {
+      "repo": "scdenney/open-science-skills",
+      "path": "archive/claude/model-council-voting/SKILL.md"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "path": "skills/assay/SKILL.md"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "path": "skills/looot/SKILL.md"
     }
   ]
 }
